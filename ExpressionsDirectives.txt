@@ -1,0 +1,49 @@
+1. Expressions:
+
+2. Used to put values directly into the output.
+To simplify these expressions, you can use 
+ - request
+ - response
+ - session
+ - out
+ - application
+
+3.EXAMPLE: <%= new java.util.Date() %>
+4.myFirstJSP.jsp 
+
+5. Tomcat puts it into the work/Catalina/localhost/java112/ord/apache/jsp folder once the user 
+launches the jsp page in the browser.
+
+6. Simple Java code i.e Date.
+Simple logic
+Only use when you need to write simple java logic 
+
+
+example <%= request.getRemoteHost() %>
+
+7. You can only use little bits of code
+One simple statement of code.
+Not easily expandable
+
+
+1. Directives
+
+2. Mechanism for providing specific instructions to the container when it translates JSP to servlet code. 
+The directives supported by JSP are categorized as - 
+Import directive
+Page directive 
+Taglib directive
+
+3. <%@ page import = "java.util.*" %>
+<%@ page import"empSalary.esops.proratacalc" %>
+
+4. myFirstJSP.jsp
+
+5.Tomcat puts it into the work/Catalina/localhost/java112/ord/apache/jsp folder once the user 
+launches the jsp page in the browser. Places the import at the top of the file
+
+6. When you need a specific class i.e util package
+Best used when you need more than just one statement
+Used for different classes, not just java class, but also jsp and html files
+
+7. Too much java code in jsp, leads to security issues
