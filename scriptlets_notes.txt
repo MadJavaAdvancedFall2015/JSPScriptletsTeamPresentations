@@ -1,0 +1,236 @@
+﻿                    JSP scriptlets
+
+===================================================================
+
+Scriptlets are nothing but java code enclosed within <% and %> tags
+
+===================================================================
+
+
+
+
+Syntax of Scriptlet
+
+[code language=”java”]<% Executable java code%>[/code]
+
+
+
+----------------------
+
+Example 1
+
+
+
+[code language=”html”]
+<H3> Sample JSP </H3>
+<% myMethod();%>
+[/code]
+
+
+----------------------
+
+
+
+* Notice the ; at end of scriptlet line inside of <%  %>
+
+
+
+
+
+----------------------
+
+Example 2
+
+
+
+[code language=”java”]
+
+<%– A jsp example to learn the JSP scripting elements–%>
+
+<%String string1 ="JSP scriptlet";%>
+
+<%!String string2 ="";%>
+
+<html>
+
+<head>
+
+<title> JSP page: Welcome </title>
+
+</head>
+
+<body>
+
+<h1>
+
+<%–This is an Expression statement–%>
+
+Welcome to <%=string1%>
+
+</h1>
+
+
+
+<%–sciptlet example–%>
+
+<%if(localstring.equals("JSP scriptlet")){%>
+
+Hi
+
+<%}
+
+else {%>
+
+hello
+
+<%} %>
+
+
+
+<%–same thing can be done in this way also–%>
+
+<%if(localstring.equals("JSP scriptlet"))
+
+out.println("Hi"+string2);
+
+else
+out.println("hello");
+
+%>
+
+</body>
+
+</html>[/code]
+
+
+----------------------
+
+
+
+==============================================================
+
+                    Why use scriptlets?
+
+    - in order to execute java code in JSP we use scriptlets
+
+    - To use the if-else control flow statements of java,
+
+      we have used scriptlet in above example. As this is the
+
+      main advantage of using a scriptlet
+
+
+==============================================================
+
+
+
+
+
+----------------------
+
+Example 3
+
+
+
+Suppose there is a variable num and you want to display “hi”
+
+on your webpage if it is greater than 5 otherwise you want to
+display a message. Consider the below code for this scenario –
+
+If you want to write a code in java for above situation then it
+
+would look like this –
+
+
+
+[code language=”java”]
+
+if (num > 5)
+
+{
+
+out.println("hi");
+
+}
+
+else
+
+{
+
+out.println("num value should not be less than 6");
+
+}[/code]
+
+
+
+
+
+To write the similar code in JSP we need to use JSP scriptlets –
+
+Code would be like this –
+
+
+
+[code language=”html”]
+
+<! DOCTYPE HTML PUBLIC "-//W3C//DTD HTML4.0 translation //EN">
+
+<HTML>
+
+<HEAD>
+
+<TITLE> MY JSP PAGE </TITLE>
+
+</HEAD>
+
+<BODY>
+
+<% if (num > 5) { %>
+
+<H3> hi </H3>
+
+<%} else {%>
+
+<h3> num value should not be less than 6 </h3>
+
+<% } %>
+
+</BODY>
+
+</HTML>
+
+[/code]
+
+----------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
